@@ -40,9 +40,9 @@ then
     --evdev-keymap BTN_SOUTH=a,BTN_EAST=b,BTN_NORTH=x,BTN_WEST=y,BTN_TL=lb,BTN_TR=rb,BTN_THUMBL=tl,BTN_THUMBR=tr,BTN_MODE=guide,BTN_SELECT=back,BTN_START=start,BTN_TRIGGER_HAPPY3=du,BTN_TRIGGER_HAPPY4=dd,BTN_TRIGGER_HAPPY1=dl,BTN_TRIGGER_HAPPY2=dr \
     --evdev-absmap ABS_X=dpad_x,ABS_Y=dpad_y \
     --evdev-absmap ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y \
-    --ui-buttonmap x=KEY_F,a=KEY_S,b=KEY_D,Y=KEY_A,lb=KEY_L,rb=KEY_R \
+    --ui-buttonmap x=KEY_Z,a=KEY_D,b=KEY_A,Y=KEY_S+KEY_F,lb=KEY_L,rb=KEY_R \
     --ui-buttonmap start=KEY_ENTER,back=KEY_BACKSPACE,back+start=KEY_ESC \
-    --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT \
+    --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT" \
 &
 fi
 
