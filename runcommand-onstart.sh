@@ -25,7 +25,7 @@ then
 fi
 
 #Experimental Openbor
-if [ "$2" = "openbor" ]
+if [ "$2" = "openbor" || "$2" = "openbor-6xxx" ]
 then
     sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
     --evdev /dev/input/by-id/usb-RetroFlag_GPi_Case_RetroFlag_01-event-joystick \
