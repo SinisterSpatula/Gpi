@@ -24,19 +24,15 @@ function main_menu() {
         choice=$(dialog --backtitle "$BACKTITLE" --title " MAIN MENU " \
             --ok-label OK --cancel-label Exit \
             --menu "What action would you like to perform?" 25 75 20 \
-            1 "Update Controls" \
-            2 "Update Controls Beta" \
-            3 "Update this menu" \
-            4 "System Reboot" \
-            5 "System Shutdown" \
+            1 "Update Controls Framework" \
+            2 "System Reboot" \
+            3 "System Shutdown" \
             2>&1 > /dev/tty)
 
         case "$choice" in
             1) update_controls  ;;
-            2) controls_beta  ;;
-            3) update_menu  ;;
-            4) system_reboot  ;;
-            5) system_shutdown  ;;
+            2) system_reboot  ;;
+            3) system_shutdown  ;;
             *)  break ;;
         esac
     done
@@ -55,20 +51,29 @@ function validate_url(){
 }
 
 function update_controls() {
-if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/runcommand-onstart.sh; then
+if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/xboxdrvstart.sh; then
 cd
 cd /opt/retropie/configs/all
-sudo wget -O runcommand-onend.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/runcommand-onend.sh
-sudo wget -O runcommand-onstart.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/runcommand-onstart.sh
+sudo wget -O runcommand-onend.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/runcommand-onend.sh
+sudo wget -O runcommand-onstart.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/runcommand-onstart.sh
 sudo chmod a+x *.sh
 cd
 cd /opt/retropie/supplementary/xboxdrv/bin
-sudo wget -O quit.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/quit.sh
+sudo wget -O quit.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/quit.sh
 sudo chmod a+x quit.sh
-    echo "---------------"
-    echo "|| Success!  ||"
-    echo "---------------"
-    sleep 5s
+sudo mkdir -p ~/RetroPie/retropiemenu/Controllertools
+cd
+cd ~/RetroPie/retropiemenu/Controllertools
+sudo wget -O control_updater_menu.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/control_updater_menu.sh
+sudo chmod 775 control_updater_menu.sh
+sudo rm ~/RetroPie/retropiemenu/control_updater_menu.sh
+echo "-------------------------------------"
+echo "|Migrated to new Controls Framework.|"
+echo "|  Relaunch again and update again  |"
+echo "|  !!!Please do the update again!!! |"
+echo "| updater is now in controllertools |"
+echo "-------------------------------------"
+sleep 60s
   else
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     echo ".                                      ."
@@ -83,31 +88,6 @@ function launch_commandline() {
 break
 }
 
-function controls_beta() {
-if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/runcommand-onstart.sh; then
-cd
-cd /opt/retropie/configs/all
-sudo wget -O runcommand-onend.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/runcommand-onend.sh
-sudo wget -O runcommand-onstart.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/runcommand-onstart.sh
-sudo chmod a+x *.sh
-cd
-cd /opt/retropie/supplementary/xboxdrv/bin
-sudo wget -O quit.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/quit.sh
-sudo chmod a+x quit.sh
-    echo "---------------"
-    echo "|| Success!  ||"
-    echo "---------------"
-    sleep 5s
-  else
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    echo ".                                      ."
-    echo ".FAILED! File not available or wifi off."
-    echo ".                                      ."
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    sleep 10s
-fi
-}
-
 function system_shutdown() {
 sudo shutdown -P now
 }
@@ -116,27 +96,6 @@ function system_reboot() {
 sudo reboot
 }
 
-function update_menu() {
-if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/control_updater_menu.sh; then
-cd
-cd ~/RetroPie/retropiemenu
-sudo wget -O control_updater_menu.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/control_updater_menu.sh
-sudo chmod 775 control_updater_menu.sh
-sudo chmod a+x *.sh
-    echo "---------------"
-    echo "|| Success!  ||"
-    echo "---------------"
-    sleep 5s
-exit
-  else
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    echo ".                                      ."
-    echo ".FAILED! File not available or wifi off."
-    echo ".                                      ."
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    sleep 10s
-fi
-}
 
 # Main
 
