@@ -74,6 +74,7 @@ echo "|  !!!Please do the update again!!! |"
 echo "| updater is now in controllertools |"
 echo "-------------------------------------"
 sleep 30s
+exit
   else
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     echo ".                                      ."
