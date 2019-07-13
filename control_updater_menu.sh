@@ -71,7 +71,8 @@ sudo chmod 775 control_updater_menu.sh
 sudo rm ~/RetroPie/retropiemenu/control_updater_menu.sh
 echo "-------------------------------------"
 echo "|Migrated to new Controls Framework.|"
-echo "|  Please restart emulation station |
+echo "|  Please restart emulation station |"
+echo "|  new location is Controllertools  |"
 echo "-------------------------------------"
 sleep 20s
   else
