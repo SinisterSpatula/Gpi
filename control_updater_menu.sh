@@ -56,6 +56,8 @@ cd
 cd /opt/retropie/configs/all
 sudo wget -O runcommand-onend.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/runcommand-onend.sh
 sudo wget -O runcommand-onstart.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/runcommand-onstart.sh
+sudo wget -O xboxdrvstart.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/xboxdrvstart.sh
+sudo wget -O xboxdrvend.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/xboxdrvend.sh
 sudo chmod a+x *.sh
 cd
 cd /opt/retropie/supplementary/xboxdrv/bin
@@ -69,13 +71,9 @@ sudo chmod 775 control_updater_menu.sh
 sudo rm ~/RetroPie/retropiemenu/control_updater_menu.sh
 echo "-------------------------------------"
 echo "|Migrated to new Controls Framework.|"
-echo "|  Relaunch again and update again  |"
-echo "|  !!!Please do the update again!!! |"
-echo "| updater is now in controllertools |"
-echo "| restart emulationstation first    |"
+echo "|  Please restart emulation station |
 echo "-------------------------------------"
-sleep 30s
-exit
+sleep 20s
   else
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     echo ".                                      ."
