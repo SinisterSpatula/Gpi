@@ -73,7 +73,7 @@ echo "|  Relaunch again and update again  |"
 echo "|  !!!Please do the update again!!! |"
 echo "| updater is now in controllertools |"
 echo "-------------------------------------"
-sleep 60s
+sleep 30s
   else
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     echo ".                                      ."
