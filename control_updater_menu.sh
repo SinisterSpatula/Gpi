@@ -72,6 +72,7 @@ echo "|Migrated to new Controls Framework.|"
 echo "|  Relaunch again and update again  |"
 echo "|  !!!Please do the update again!!! |"
 echo "| updater is now in controllertools |"
+echo "| restart emulationstation first    |"
 echo "-------------------------------------"
 sleep 30s
 exit
