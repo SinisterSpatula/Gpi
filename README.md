@@ -13,8 +13,9 @@ cd && cd RetroPie/retropiemenu && wget -O control_updater_menu.sh  https://raw.g
 ## Then run this command
 
 ```shell
- sudo /home/pi/RetroPie/retropiemenu/control_updater_menu.sh update_controls
+ sudo /home/pi/RetroPie/retropiemenu/control_updater_menu.sh
 ```
+## choose Update Controls Framework, then exit.
 
 ## Retart Emulationstation
 
