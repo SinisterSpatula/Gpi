@@ -13,5 +13,5 @@ cd && cd RetroPie/retropiemenu && wget -O control_updater_menu.sh  https://raw.g
 ## Then run this command and pick "Update Framework"
 
 ```shell
-sudo .~/RetroPie/retropiemenu/control_updater_menu.sh
+ sudo /home/pi/RetroPie/retropiemenu/control_updater_menu.sh
 ```
