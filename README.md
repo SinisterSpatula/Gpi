@@ -1,7 +1,5 @@
 # Gpi scripts
 
-This repository is outdated, please  see the new repository here: https://github.com/SinisterSpatula/Gpi2/
-
 # To migrate to the new framework
 
 ## Update the menu
@@ -20,3 +18,5 @@ cd && cd RetroPie/retropiemenu && wget -O control_updater_menu.sh  https://raw.g
 ## Retart Emulationstation
 
 ### Done.
+
+This repository is outdated, after performing the above, please  see the new repository here: https://github.com/SinisterSpatula/Gpi2/
