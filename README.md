@@ -19,6 +19,7 @@ cd && cd RetroPie/retropiemenu && wget -O control_updater_menu.sh  https://raw.g
 
 ### Done.
 
+You also need to have xboxdrv installed (if it isn't already).  [See the Guide here](https://sinisterspatula.github.io/SuperRetropieGuides/Controls_Updater_Menu)
 
 ## Additional Resources
 
