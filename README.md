@@ -19,6 +19,6 @@ cd && cd RetroPie/retropiemenu && wget -O control_updater_menu.sh  https://raw.g
 
 ### Done.
 
-After performing the above
+
 
 The newest source code of this project is located here: https://github.com/SinisterSpatula/Gpi2/
