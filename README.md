@@ -1,8 +1,10 @@
 # Gpi scripts
 
-# To migrate to the new framework
+These xboxdrv controller scripts greatly enhance the capabilities of your Gpi Case.  They can provide many virtual buttons using a button as a modifier.  (In effect, it can turn the six button control scheme into a 12 button one!)
 
-## Update the menu
+# To migrate to the new framework or to install the scripts for the first time:
+
+## Update/install the menu
 
 ```shell
 cd && cd RetroPie/retropiemenu && wget -O control_updater_menu.sh  https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/control_updater_menu.sh && sudo chmod 775 control_updater_menu.sh
