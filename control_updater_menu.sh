@@ -58,7 +58,7 @@ sudo wget -O runcommand-onend.sh https://raw.githubusercontent.com/SinisterSpatu
 sudo wget -O runcommand-onstart.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/runcommand-onstart.sh
 sudo wget -O xboxdrvstart.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/xboxdrvstart.sh
 sudo wget -O xboxdrvend.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/xboxdrvend.sh
-sudo chmod a+x *.sh
+sudo chmod 644 *.sh
 cd
 cd /opt/retropie/supplementary/xboxdrv/bin
 sudo wget -O quit.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/quit.sh
